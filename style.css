@@ -8,15 +8,96 @@
 }
 
 body{
+    --background-color: rgb(255, 106, 0);
+    
     display:flex;
     justify-content: center;
     align-items: center;
     padding-top: 5%;
 }
 
-.main{
-    --background-color: rgb(255, 106, 0);
+.white-button{
+    padding: 3px 10px 3px 10px;
+    border-radius: 6px;
+    border: 0;
+    box-sizing: border-box;
+    min-width: 15px;
+    font-size: 14px;
+    background-color: white;
+    color: var(--background-color, black);
+    font-weight: 600;
+    cursor: pointer;
+}
 
+.orange-button{
+    padding: 3px 10px 3px 10px;
+    border-radius: 6px;
+    border: 0;
+    box-sizing: border-box;
+    min-width: 15px;
+    font-size: 14px;
+    background-color: var(--background-color, black);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+dialog{
+    border: 0;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+    width: 60vw;
+    min-width: 400px;
+    height: 60vh;
+    min-height: 400px;
+    box-sizing: border-box;
+    padding: 3%;
+    overflow: hidden;
+    input{
+        border: 1px solid var(--background-color, black);
+        background-color: rgb(244, 244, 244);
+    }
+    input:hover{
+        border: 1px solid var(--background-color, black);
+    }
+    *{
+        margin-bottom: 10px;
+    }
+    form{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .container{
+        overflow-y: auto;
+        background-color: var(--background-color, black);
+        height: 400px;
+        padding: 3%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        * {
+            margin:0;
+        }
+        div{
+            display: flex;
+            padding: 3%;
+            gap: 15px;
+            background-color: white;
+            border-radius: 10px;
+            color: var(--background-color, black)
+        }
+    }
+    .close-button{
+        justify-self: end;
+    }
+}
+
+.main{
     min-height: 400px;
     min-width: 350px;
     background-color: var(--background-color, black);
@@ -29,18 +110,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    button{
-        padding: 3px 10px 3px 10px;
-        border-radius: 6px;
-        border: 0;
-        box-sizing: border-box;
-        min-width: 15px;
-        font-size: 14px;
-        background-color: white;
-        color: var(--background-color, black);
-        font-weight: 600;
-        cursor: pointer;
-    }
     input{
         border: 0;
         box-sizing: border-box;
@@ -62,12 +131,6 @@ body{
             font-size: 20px;
             flex: 1 0 auto;
             text-align: start;
-        }
-        .delete,
-        .viewMore{
-            justify-self: flex-end;
-            background-color: var(--background-color);
-            color:white;
         }
     }
     .toDos{
